@@ -41,64 +41,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Обробка відправки форми
     form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const fields = ['field1', 'field2', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value);
-        const anonymous = anonymousCheckbox.checked;
-        const customName = document.getElementById('customName').value.trim();
-    
-        const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
-        let userName;
-        if (anonymous) {
-            userName = customName || 'Incognito';
+    event.preventDefault();
+    const fields = ['field1', 'field2', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value);
+    const anonymous = anonymousCheckbox.checked;
+    const customName = document.getElementById('customName').value.trim();
+
+    const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
+    let userName;
+    if (anonymous) {
+        userName = customName || 'Incognito';
+    } else {
+        userName = user ? (user.username ? `@${user.username}` : user.first_name || 'Incognito') : 'Incognito';
+    }
+
+    const data = {
+        price: fields[0] || 'Не вказано',
+        discount: fields[1] || 'Не вказано',
+        conditions: fields[2] || 'Не вказано',
+        link: fields[3] || 'Не вказано',
+        comments: fields[4] || 'Не вказано',
+        user_name: userName
+    };
+
+    console.log('Відправляємо дані:', data);
+    console.log('Починаємо fetch до:', 'https://a44e-37-73-0-35.ngrok-free.app/submit');
+
+    try {
+        const response = await fetch('https://a44e-37-73-0-35.ngrok-free.app/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        console.log('Статус відповіді:', response.status);
+        console.log('ОК:', response.ok);
+        const result = await response.json();
+        console.log('Результат:', result);
+        if (response.ok) {
+            const messageDiv = document.createElement('div');
+            messageDiv.innerHTML = 'Ви успішно поділилися знахідкою! <a href="https://t.me/+wPfCVW-7i-w3NWYy" target="_blank">https://t.me/+wPfCVW-7i-w3NWYy</a>! Дякуємо!';
+            messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #191970, #7FFFD4); color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif;';
+            document.body.appendChild(messageDiv);
+            setTimeout(() => messageDiv.remove(), 5000);
         } else {
-            userName = user ? (user.username ? `@${user.username}` : user.first_name || 'Incognito') : 'Incognito';
+            console.error('Помилка сервера:', result.error);
+            alert('Помилка: ' + result.error);
         }
-    
-        const data = {
-            price: fields[0] || 'Не вказано',
-            discount: fields[1] || 'Не вказано',
-            conditions: fields[2] || 'Не вказано',
-            link: fields[3] || 'Не вказано',
-            comments: fields[4] || 'Не вказано',
-            user_name: userName
-        };
-    
-        console.log('Відправляємо дані:', data);
-        console.log('Починаємо fetch до:', 'https://e491-176-37-100-172.ngrok-free.app/submit');
-    
-        try {
-            const response = await fetch('https://e491-176-37-100-172.ngrok-free.app/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-            console.log('Статус відповіді:', response.status);
-            console.log('ОК:', response.ok);
-    
-            const result = await response.json();
-            console.log('Повна відповідь сервера:', result);
-    
-            if (response.ok && result.success) {
-                const messageDiv = document.createElement('div');
-                messageDiv.innerHTML = result.message_html;
-                document.body.appendChild(messageDiv);
-    
-                const okButton = document.getElementById('okButton');
-                if (okButton) {
-                    okButton.addEventListener('click', () => {
-                        messageDiv.remove();
-                    });
-                }
-            } else {
-                const errorMessage = result.error || 'Невідома помилка сервера';
-                console.error('Помилка сервера:', errorMessage);
-                alert('Помилка: ' + errorMessage);
-            }
-        } catch (error) {
-            console.error('Помилка fetch:', error);
-            alert('Помилка при відправці: ' + error.message);
-        }
-    });
+    } catch (error) {
+        console.error('Помилка fetch:', error);
+        alert('Помилка при відправці: ' + error.message);
+    }
+});
 
     // Очищення форми
     document.querySelector('.clear-btn').addEventListener('click', () => {
