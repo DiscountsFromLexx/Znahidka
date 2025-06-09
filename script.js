@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (response.ok && result.success) {
             const messageDiv = document.createElement('div');
-            messageDiv.innerHTML = result.message_html;
+            // messageDiv.innerHTML = result.message_html;
             document.body.appendChild(messageDiv);
             messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #0000CD, #0000CD); color: white; padding: 5px 25px; border-radius: 5px; z-index: 1000; text-align: center;';
             okButton.style.cssText = 'background-color: #ffffff; color: #008080; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;';
