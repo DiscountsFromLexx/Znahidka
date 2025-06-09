@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 messageDiv.innerHTML = result.message;
                 messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #ADD8E6, #ADD8E6); color: #191970; padding: 5px 5px; border-radius: 2px; z-index: 1000; font-family: "Montserrat", sans-serif;';
                 document.body.appendChild(messageDiv);
-                setTimeout(() => messageDiv.remove(), 10000);
+                // setTimeout(() => messageDiv.remove(), 10000);
             } else {
                 const errorMessage = result.error || 'Невідома помилка сервера';
                 console.error('Помилка сервера:', errorMessage);
