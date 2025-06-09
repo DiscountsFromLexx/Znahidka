@@ -63,43 +63,36 @@ document.addEventListener('DOMContentLoaded', () => {
         user_name: userName
     };
 
-    console.log('Відправляємо дані:', data); // Лог даних
+    console.log('Відправляємо дані:', data);
+    console.log('Починаємо fetch до:', 'https://a44e-37-73-0-35.ngrok-free.app/submit');
 
     try {
-        console.log('Починаємо fetch до:', 'https://a44e-37-73-0-35.ngrok-free.app/submit'); // Лог URL
         const response = await fetch('https://a44e-37-73-0-35.ngrok-free.app/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         });
-        console.log('Відповідь сервера:', response); // Лог відповіді
-        console.log('Статус відповіді:', response.status); // Лог статусу
+        console.log('Статус відповіді:', response.status);
         const result = await response.json();
-        console.log('Результат JSON:', result); // Лог JSON
-        if (response.ok) {
+        console.log('Результат:', result);
+
+        if (response.ok && result.success) {
             const messageDiv = document.createElement('div');
-            messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #008080, #48D1CC); color: white; padding: 50px 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif; text-align: center;';
-            
-            const messageText = document.createElement('div');
-            messageText.innerHTML = 'Ви успішно поділилися знахідкою! <a href="https://t.me/+wPfCVW-7i-w3NWYy" target="_blank">https://t.me/+wPfCVW-7i-w3NWYy</a><br> Дякуємо!';
-            messageText.style.marginBottom = '10px';
-            
-            const okButton = document.createElement('button');
-            okButton.textContent = 'ОК';
-            okButton.style.cssText = 'background-color: #ffffff; color: #008080; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-family: "Montserrat", sans-serif; font-weight: bold;';
-            okButton.addEventListener('click', () => {
-                messageDiv.remove();
-            });
-            
-            messageDiv.appendChild(messageText);
-            messageDiv.appendChild(okButton);
+            messageDiv.innerHTML = result.message_html;
             document.body.appendChild(messageDiv);
+
+            const okButton = document.getElementById('okButton');
+            if (okButton) {
+                okButton.addEventListener('click', () => {
+                    messageDiv.remove();
+                });
+            }
         } else {
             console.error('Помилка сервера:', result.error);
             alert('Помилка: ' + result.error);
         }
     } catch (error) {
-        console.error('Помилка fetch:', error); // Лог помилки fetch
+        console.error('Помилка fetch:', error);
         alert('Помилка при відправці: ' + error.message);
     }
 });
