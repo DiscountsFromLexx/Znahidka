@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #008080, #48D1CC); color: white; padding: 50px 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif; text-align: center;';
             
             const messageText = document.createElement('div');
-            messageText.innerHTML = 'Ви успішно поділилися знахідкою! <a href="https://t.me/+wPfCVW-7i-w3NWYy" target="_blank">https://t.me/+wPfCVW-7i-w3NWYy</a>! Дякуємо!';
+            messageText.innerHTML = 'Ви успішно поділилися знахідкою! <a href="https://t.me/+wPfCVW-7i-w3NWYy" target="_blank">https://t.me/+wPfCVW-7i-w3NWYy</a><br> Дякуємо!';
             messageText.style.marginBottom = '10px';
             
             const okButton = document.createElement('button');
