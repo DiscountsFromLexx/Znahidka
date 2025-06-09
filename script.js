@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
        };
 
        console.log('Відправляємо дані:', data);
-       console.log('Починаємо fetch до:', 'https://a44e-37-73-0-35.ngrok-free.app/submit');
+       console.log('Починаємо fetch до:', 'https://e491-176-37-100-172.ngrok-free.app/submit');
 
        try {
            const response = await fetch('https://a44e-37-73-0-35.ngrok-free.app/submit', {
