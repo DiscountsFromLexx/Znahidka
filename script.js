@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok && result.success) {
                 const messageDiv = document.createElement('div');
                 messageDiv.innerHTML = result.message;
-                messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #191970, #7FFFD4); color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif;';
+                messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #ADD8E6, #ADD8E6); color: white; padding: 5px 5px; border-radius: 2px; z-index: 1000; font-family: "Montserrat", sans-serif;';
                 document.body.appendChild(messageDiv);
                 setTimeout(() => messageDiv.remove(), 5000);
             } else {
