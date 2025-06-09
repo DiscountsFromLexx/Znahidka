@@ -79,10 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (response.ok && result.success) {
             const messageDiv = document.createElement('div');
-            messageDiv.innerHTML = result.message;
-            messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #191970, #7FFFD4); color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif;';
+            messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #191970, #7FFFD4); color: white; padding: 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif; text-align: center;';
+            
+            const messageText = document.createElement('div');
+            messageText.innerHTML = result.message;
+            messageText.style.marginBottom = '10px';
+            
+            const okButton = document.createElement('button');
+            okButton.textContent = 'Гаразд';
+            okButton.style.cssText = 'background-color: #ffffff; color: #191970; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-family: "Montserrat", sans-serif; font-weight: bold;';
+            okButton.addEventListener('click', () => {
+                messageDiv.remove();
+            });
+            
+            messageDiv.appendChild(messageText);
+            messageDiv.appendChild(okButton);
             document.body.appendChild(messageDiv);
-            setTimeout(() => messageDiv.remove(), 5000);
         } else {
             const errorMessage = result.error || 'Невідома помилка сервера';
             console.error('Помилка сервера:', errorMessage);
