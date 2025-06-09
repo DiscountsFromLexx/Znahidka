@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Відправлені дані:', data);
 
         try {
-            const response = await fetch('https://your-google-cloud-ip:5001/submit', {
+            const response = await fetch('https://a44e-37-73-0-35.ngrok-free.app/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
