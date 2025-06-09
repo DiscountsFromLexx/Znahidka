@@ -64,41 +64,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     console.log('Відправляємо дані:', data);
-    console.log('Починаємо fetch до:', 'https://e491-176-37-100-172.ngrok-free.app/submit');
+    console.log('Починаємо fetch до:', 'https://a44e-37-73-0-35.ngrok-free.app/submit');
 
     try {
-        const response = await fetch('https://e491-176-37-100-172.ngrok-free.app/submit', {
+        const response = await fetch('https://a44e-37-73-0-35.ngrok-free.app/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         });
         console.log('Статус відповіді:', response.status);
-        console.log('ОК:', response.ok);
         const result = await response.json();
         console.log('Результат:', result);
 
         if (response.ok && result.success) {
             const messageDiv = document.createElement('div');
-            messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: linear-gradient(to bottom, #191970, #7FFFD4); color: white; padding: 20px; border-radius: 5px; z-index: 1000; font-family: "Montserrat", sans-serif; text-align: center;';
-            
-            const messageText = document.createElement('div');
-            messageText.innerHTML = result.message;
-            messageText.style.marginBottom = '10px';
-            
-            const okButton = document.createElement('button');
-            okButton.textContent = 'Гаразд';
-            okButton.style.cssText = 'background-color: #ffffff; color: #191970; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-family: "Montserrat", sans-serif; font-weight: bold;';
-            okButton.addEventListener('click', () => {
-                messageDiv.remove();
-            });
-            
-            messageDiv.appendChild(messageText);
-            messageDiv.appendChild(okButton);
+            messageDiv.innerHTML = result.message_html;
             document.body.appendChild(messageDiv);
+
+            const okButton = document.getElementById('okButton');
+            if (okButton) {
+                okButton.addEventListener('click', () => {
+                    messageDiv.remove();
+                });
+            }
         } else {
-            const errorMessage = result.error || 'Невідома помилка сервера';
-            console.error('Помилка сервера:', errorMessage);
-            alert('Помилка: ' + errorMessage);
+            console.error('Помилка сервера:', result.error);
+            alert('Помилка: ' + result.error);
         }
     } catch (error) {
         console.error('Помилка fetch:', error);
