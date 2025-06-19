@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         const data = {
             price: fields[0] || 'Не вказано',
-            //discount: fields[1] || 'Не вказано',
+            
             conditions: fields[2] || 'Не вказано',
             link: fields[3] || 'Не вказано',
             comments: fields[4] || '',
