@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обробка відправки форми
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const fields = ['field1', 'field2', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value);
+        const fields = ['field2', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value);
         const anonymous = anonymousCheckbox.checked;
         const customName = document.getElementById('customName').value.trim();
     
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         const data = {
             price: fields[0] || 'Не вказано',
-            discount: fields[1] || 'Не вказано',
+            //discount: fields[1] || 'Не вказано',
             conditions: fields[2] || 'Не вказано',
             link: fields[3] || 'Не вказано',
-            comments: fields[4] || 'Не вказано',
+            comments: fields[4] || '',
             user_name: userName
         };
     
