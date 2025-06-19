@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Обробка відправки форми
-    form.addEventListener('submit', async (event) => {
+        form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const fields = ['field2', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value);
+        const fields = ['field1', 'field3', 'field4', 'field5'].map(id => document.getElementById(id).value); // Оновлено: field1 замість field2
         const anonymous = anonymousCheckbox.checked;
         const customName = document.getElementById('customName').value.trim();
     
@@ -55,13 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         const data = {
-            price: fields[0] || 'Не вказано',
-            
-            conditions: fields[2] || 'Не вказано',
-            link: fields[3] || 'Не вказано',
-            comments: fields[4] || '',
+            price: fields[0] || 'Не вказано', // field1 тепер перше поле
+            conditions: fields[1] || 'Не вказано',
+            link: fields[2] || 'Не вказано',
+            comments: fields[3] || '',
             user_name: userName
-        };
+        };    
     
         console.log('Відправляємо дані:', data);
         console.log('Починаємо fetch до:', 'https://5909-176-37-100-172.ngrok-free.app/submit');
