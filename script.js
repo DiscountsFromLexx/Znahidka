@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         const data = {
             price: fields[0] || 'Не вказано', // field1 тепер перше поле
-            conditions: fields[1] || 'Не вказано',
+            conditions: fields[1] || '',
             link: fields[2] || 'Не вказано',
             comments: fields[3] || '',
             user_name: userName
