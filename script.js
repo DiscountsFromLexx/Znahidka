@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         console.log('Відправляємо дані:', data);
-        console.log('Починаємо fetch до:', 'https://1f5f-176-37-100-172.ngrok-free.app/submit');
+        console.log('Починаємо fetch до:', 'https://ff93-176-37-100-172.ngrok-free.app/submit');
     
         try {
-            const response = await fetch('https://1f5f-176-37-100-172.ngrok-free.app/submit', {
+            const response = await fetch('https://ff93-176-37-100-172.ngrok-free.app/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
