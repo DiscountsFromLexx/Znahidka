@@ -103,9 +103,8 @@ body {
 .input-group label {
     display: block;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 200;
     font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: white;
     color: #FFFFFF;
     letter-spacing: 2px;
     margin-bottom: 5px;
@@ -116,9 +115,8 @@ body {
     border: 1px solid #4682B4;
     border-radius: 6px;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 200;
     font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: white;
     color: #FFFFFF;
     letter-spacing: 2px;
     background: #000000;
