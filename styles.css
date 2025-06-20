@@ -247,6 +247,12 @@ body {
         padding: 8px 15px;
         font-size: 14px;
     }
+    .znahidka-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
     .header-text {
         font-size: 18px;
     }
