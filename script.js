@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
             if (response.ok && result.success) {
                 const messageDiv = document.createElement('div');
-                messageDiv.innerHTML = result.message; // HTML буде оброблено як клікабельне посилання
-                messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px; z-index: 1000; font-family: sans-serif;'; // Прості стилі
+                messageDiv.innerHTML = result.message.replace('https://t.me/+Nmsg2YySEj8zYTVi', '<a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank">https://t.me/+Nmsg2YySEj8zYTVi</a>');
+                messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px; z-index: 1000; font-family: sans-serif;'; // Мінімальні стилі
                 document.body.appendChild(messageDiv);
                 setTimeout(() => messageDiv.remove(), 10000); // Зникає через 10 секунд
             } else {
