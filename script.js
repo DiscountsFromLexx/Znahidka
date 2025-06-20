@@ -77,16 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Результат:', result);
     
             if (response.ok && result.success) {
-                const messageDiv = document.createElement('div');
-                messageDiv.innerHTML = result.message.replace('https://t.me/+Nmsg2YySEj8zYTVi', '<a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank">https://t.me/+Nmsg2YySEj8zYTVi</a>');
-                messageDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px; z-index: 1000; font-family: sans-serif;'; // Мінімальні стилі
-                document.body.appendChild(messageDiv);
-                setTimeout(() => messageDiv.remove(), 10000); // Зникає через 10 секунд
-            } else {
-                const errorMessage = result.error || 'Невідома помилка сервера';
-                console.error('Помилка сервера:', errorMessage);
-                alert('Помилка: ' + errorMessage);
-            }
+                    alert(result.message); // Просте сповіщення без стилів
+                } else {
+                    const errorMessage = result.error || 'Невідома помилка сервера';
+                    console.error('Помилка сервера:', errorMessage);
+                    alert('Помилка: ' + errorMessage);
+                }
         } catch (error) {
             console.error('Помилка fetch:', error);
             alert('Помилка при відправці: ' + error.message);
