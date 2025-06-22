@@ -257,5 +257,7 @@ body {
     }
     .input-group input {
         font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
     }
 }
