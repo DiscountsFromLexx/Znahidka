@@ -232,10 +232,8 @@ body {
     transform: scale(1.1);
 }
 @media (max-width: 500px) {
-    body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .container {
+    width: 100%;
     background: #000000;
         
     .main-container {
