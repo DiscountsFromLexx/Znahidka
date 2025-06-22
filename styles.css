@@ -1,17 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Змінено з center на flex-start для прокрутки */
     background: linear-gradient(to bottom, #000000, #4B0082);
     min-height: 100vh;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -19,8 +25,12 @@ body {
     width: 90%;
     min-width: 300px;
     max-width: 600px;
+    max-height: 90vh; /* Обмеження висоти для центрування */
+    margin: 5vh auto; /* Центрування по вертикалі та горизонталі */
     padding: 20px;
+    overflow-y: auto; /* Прокрутка, якщо вміст перевищує висоту */
 }
+
 .container {
     width: 100%;
     background: linear-gradient(to bottom, #000000, #4B0082);
@@ -30,6 +40,7 @@ body {
     text-align: center;
     position: relative;
 }
+
 .instruction-btn {
     position: absolute;
     top: 15px;
@@ -48,10 +59,12 @@ body {
     -webkit-tap-highlight-color: transparent;
     letter-spacing: 2px;
 }
+
 .instruction-btn:hover {
     background: #1E90FF;
     color: #ffffff;
 }
+
 .znahidka-btn {
     position: absolute;
     top: 15px;
@@ -71,18 +84,22 @@ body {
     -webkit-tap-highlight-color: transparent;
     letter-spacing: 2px;
 }
+
 .znahidka-btn:hover {
     background: #1E90FF;
     color: #ffffff;
 }
+
 .instruction-img-link {
     margin-top: 20px;
 }
+
 .instruction-img {
     width: 80px;
     height: 80px;
     border-radius: 10px;
 }
+
 .header-text {
     margin-top: 20px;
     font-size: 20px;
@@ -92,14 +109,17 @@ body {
     letter-spacing: 2px;
     text-align: center;
 }
+
 .block-form {
     margin-top: 20px;
     padding: 10px;
 }
+
 .input-group {
     margin-bottom: 16px;
     text-align: left;
 }
+
 .input-group label {
     display: block;
     font-size: 20px;
@@ -109,6 +129,7 @@ body {
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
+
 .input-group input {
     width: 100%;
     padding: 10px;
@@ -122,17 +143,20 @@ body {
     background: #000000;
     transition: border-color 0.3s ease;
 }
+
 .input-group input:focus {
     outline: none;
     border-color: #1E90FF;
     box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
 }
+
 .submit-group {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
 }
+
 .submit-btn, .clear-btn {
     background: linear-gradient(to bottom, #000000, #191970);
     color: #fff;
@@ -148,14 +172,17 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .submit-btn:hover, .clear-btn:hover {
     background: linear-gradient(to bottom, #4682B4, #1E90FF);
     transform: translateY(-2px);
 }
+
 .submit-btn:active, .clear-btn:active {
     transform: translateY(0);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
+
 .channels-text {
     margin-top: 30px;
     font-size: 16px;
@@ -166,6 +193,7 @@ body {
     letter-spacing: 1px;
     text-align: left;
 }
+
 .tgkch-text {
     font-size: 18px;
     font-weight: 900;
@@ -175,13 +203,16 @@ body {
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
+
 .channels-text a {
     color: #1E90FF;
     text-decoration: none;
 }
+
 .channels-text a:hover {
     text-decoration: underline;
 }
+
 .iheader-text {
     margin-top: 40px;
     font-size: 22px;
@@ -191,6 +222,7 @@ body {
     color: #FFFFFF;
     text-align: left;
 }
+
 .instructions-text {
     margin-top: 10px;
     font-size: 16px;
@@ -202,15 +234,18 @@ body {
     text-align: left;
     line-height: 1.5;
 }
+
 .instructions-text a {
     color: #00BFFF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .instructions-text a:hover {
     color: #B2EBF2;
     text-decoration: underline;
 }
+
 .scroll-top-btn {
     display: none;
     position: fixed;
@@ -227,17 +262,20 @@ body {
     transition: all 0.3s ease;
     z-index: 1000;
 }
+
 .scroll-top-btn:hover {
     background: #FF6347;
     transform: scale(1.1);
 }
+
 @media (max-width: 500px) {
     .main-container {
-        padding: 4px;
         width: 95%;
+        margin: 2vh auto; /* Менший відступ для мобільних */
+        padding: 10px;
     }
     .container {
-        padding: 6px;
+        padding: 15px;
     }
     .instruction-btn {
         top: 10px;
@@ -255,9 +293,10 @@ body {
     .header-text {
         font-size: 18px;
     }
+    .input-group label {
+        font-size: 18px;
+    }
     .input-group input {
         font-size: 14px;
-        font-family: 'Montserrat', sans-serif;
-        color: #FFFFFF;
     }
 }
