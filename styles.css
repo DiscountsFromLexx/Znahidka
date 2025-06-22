@@ -234,7 +234,7 @@ body {
 @media (max-width: 500px) {
     .main-container {
         padding: 4px;
-        width: 95%;
+        width: 100%;
     }
     .container {
         padding: 6px;
