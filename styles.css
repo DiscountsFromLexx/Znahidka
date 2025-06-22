@@ -231,17 +231,15 @@ body {
     background: #FF6347;
     transform: scale(1.1);
 }
-@media (max-width: 500px) {
-    .container {
-    width: 100%;
-    background: #000000;
-        
+@media (max-width: 500px) {  
     .main-container {
         padding: 4px;
         width: 100%;
     }
     .container {
         padding: 6px;
+        width: 100%;
+        background: #000000;
     }
     .instruction-btn {
         top: 10px;
