@@ -41,52 +41,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Обробка відправки форми
         form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const fields = ['field1', 'field4', 'field5', 'field3'].map(id => document.getElementById(id).value); // Оновлено: field1 замість field2
-        const anonymous = anonymousCheckbox.checked;
-        const customName = document.getElementById('customName').value.trim();
-    
-        const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
-        let userName;
-        if (anonymous) {
-            userName = customName || 'Incognito';
-        } else {
-            userName = user ? (user.username ? `@${user.username}` : user.first_name || 'Incognito') : 'Incognito';
-        }
-    
-        const data = {
-            price: fields[0] || 'Не вказано', // field1 тепер перше поле
-            link: fields[1] || 'Не вказано',                        
-            comments: fields[2] || '',
-            conditions: fields[3] || '',
-            user_name: userName
-        };    
-    
-        console.log('Відправляємо дані:', data);
-        console.log('Починаємо fetch до:', 'https://5909-176-37-100-172.ngrok-free.app/submit');
-    
-        try {
-            const response = await fetch('https://5909-176-37-100-172.ngrok-free.app/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-            console.log('Статус відповіді:', response.status);
-            console.log('ОК:', response.ok);
-            const result = await response.json();
-            console.log('Результат:', result);
-    
-            if (response.ok && result.success) {
-                    alert(result.message); // Просте сповіщення без стилів
+            event.preventDefault();
+            const fields = ['field1', 'field4', 'field5', 'field3'].map(id => document.getElementById(id).value);
+            const anonymous = anonymousCheckbox.checked;
+            const customName = document.getElementById('customName').value.trim();
+        
+            const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
+            let userName;
+            if (anonymous) {
+                userName = customName || 'Incognito';
+            } else {
+                userName = user ? (user.username ? `@${user.username}` : user.first_name || 'Incognito') : 'Incognito';
+            }
+        
+            const data = {
+                price: fields[0] || 'Не вказано',
+                link: fields[1] || 'Не вказано',
+                comments: fields[2] || '',
+                conditions: fields[3] || '',
+                user_name: userName,
+                user_id: user?.id || null, // Додаємо user_id
+                user_username: user?.username || null, // Додаємо username
+                user_first_name: user?.first_name || null, // Додаємо first_name
+                init_data: window.Telegram?.WebApp?.initDataRaw || '' // Додаємо initDataRaw для валідації
+            };
+        
+            console.log('Відправляємо дані:', data);
+            console.log('Починаємо fetch до:', 'https://5909-176-37-100-172.ngrok-free.app/submit');
+        
+            try {
+                const response = await fetch('https://5909-176-37-100-172.ngrok-free.app/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                console.log('Статус відповіді:', response.status);
+                console.log('ОК:', response.ok);
+                const result = await response.json();
+                console.log('Результат:', result);
+        
+                if (response.ok && result.success) {
+                    alert(result.message);
                 } else {
                     const errorMessage = result.error || 'Невідома помилка сервера';
                     console.error('Помилка сервера:', errorMessage);
                     alert('Помилка: ' + errorMessage);
                 }
-        } catch (error) {
-            console.error('Помилка fetch:', error);
-            alert('Помилка при відправці: ' + error.message);
-        }
+            } catch (error) {
+                console.error('Помилка fetch:', error);
+                alert('Помилка при відправці: ' + error.message);
+            }
     });
 
     // Очищення форми
