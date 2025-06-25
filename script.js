@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         addLog('Data to Send', data);
-        addLog('Fetch URL', 'https://b358-34-45-121-93.ngrok-free.app/submit'); // Оновлений URL
+        addLog('Fetch URL', 'https://6f3b-34-45-121-93.ngrok-free.app/submit'); // Оновлений URL
     
         try {
-            const response = await fetch('https://b358-34-45-121-93.ngrok-free.app/submit', { // Оновлений URL
+            const response = await fetch('https://6f3b-34-45-121-93.ngrok-free.app/submit', { // Оновлений URL
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
