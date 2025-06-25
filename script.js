@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         addLog('Data to Send', data);
-        addLog('Fetch URL', 'http://34.45.121.93:5001/submit'); // Оновлений URL
+        addLog('Fetch URL', 'https://34.45.121.93:5001/submit'); // Оновлений URL
     
         try {
-            const response = await fetch('http://34.45.121.93:5001/submit', { // Оновлений URL
+            const response = await fetch('https://34.45.121.93:5001/submit', { // Оновлений URL
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
