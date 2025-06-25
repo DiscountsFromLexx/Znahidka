@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const fields = ['field1', 'field4', 'field5', 'field3'].map(id => document.getElementById(id).value);
         const anonymous = anonymousCheckbox.checked;
         const customName = document.getElementById('customName').value.trim();
-
+    
         addLog('Form Submission Started', { action: 'start' });
         addLog('Anonymous', anonymous);
         addLog('Custom Name', customName);
         addLog('Form Fields', fields);
-
+    
         const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
         addLog('User Object', user);
-
+    
         let userName;
         if (anonymous) {
             userName = customName || 'Incognito';
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addLog('Username', user?.username);
             addLog('First Name', user?.first_name);
         }
-
+    
         const data = {
             price: fields[0] || 'Не вказано',
             link: fields[1] || 'Не вказано',
@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
             user_username: user?.username || null,
             user_first_name: user?.first_name || null,
             init_data: window.Telegram?.WebApp?.initData || '',
-            debug_log: logs.join('\n') // Додаємо всі логи як рядок
+            debug_log: logs.join('\n')
         };
-
+    
         addLog('Data to Send', data);
-        addLog('Fetch URL', 'https://5909-176-37-100-172.ngrok-free.app/submit');
-
+        addLog('Fetch URL', 'http://34.45.121.93:5001/submit'); // Оновлений URL
+    
         try {
-            const response = await fetch('https://5909-176-37-100-172.ngrok-free.app/submit', {
+            const response = await fetch('http://34.45.121.93:5001/submit', { // Оновлений URL
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addLog('Response OK', response.ok);
             const result = await response.json();
             addLog('Response Result', result);
-
+    
             if (response.ok && result.success) {
                 alert(result.message);
             } else {
