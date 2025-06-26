@@ -202,8 +202,8 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 24px; /* Зменшено з 60px */
-    height: 24px; /* Зменшено з 34px */
+    width: 44px; /* Зменшено з 60px */
+    height: 44px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -526,7 +526,7 @@ input:checked + .slider:before {
     }
     .theme-toggle-container {
         top: 80px;
-        right: 10px;
+        left: 10px;
         gap: 6px;
     }
     .theme-label {
