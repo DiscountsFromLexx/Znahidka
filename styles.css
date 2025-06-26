@@ -227,7 +227,7 @@ body.light-theme .theme-label {
 /* Напис на повзунку */
 .slider:after {
     position: absolute;
-    content: "OFF";
+    content: "світлий режим";
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -260,7 +260,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(10px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(18px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
