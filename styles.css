@@ -161,23 +161,23 @@ body.light-theme .submit-btn:hover, body.light-theme .clear-btn:hover {
 }
 
 body.light-theme .channels-text {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 body.light-theme .tgkch-text {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 body.light-theme .iheader-text {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 body.light-theme .instructions-text {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 body.light-theme .instructions-text a {
-    color: #00BFFF;
+    color: #000000;
 }
 
 body.light-theme .instructions-text a:hover {
@@ -246,9 +246,9 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 8px; /* Зменшено з 26px */
-    width: 8px; /* Зменшено з 26px */
-    left: 1px; /* Початкове положення */
+    height: 10px; /* Зменшено з 26px */
+    width: 10px; /* Зменшено з 26px */
+    left: 2px; /* Початкове положення */
     bottom: 3px;
     background-color: white;
     transition: 0.4s;
