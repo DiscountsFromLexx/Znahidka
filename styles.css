@@ -346,7 +346,7 @@ input:checked + .slider:before {
 .header-text {
     margin-top: 20px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-align: center;
