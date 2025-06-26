@@ -13,7 +13,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Темний режим (поточний стиль) */
+/* Темний режим (старий styles.css) */
 body.dark-theme {
     background: linear-gradient(to bottom, #000000, #191970);
 }
@@ -188,21 +188,21 @@ body.light-theme .theme-label {
     color: #000000;
 }
 
-/* Стилі для перемикача тем */
+/* Стилі для перемикача тем (зменшений розмір) */
 .theme-toggle-wrapper {
     position: absolute;
-    top: 115px; /* Зміщено нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
+    top: 115px; /* Нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
     right: 15px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     z-index: 1000;
 }
 
 .theme-toggle {
     display: inline-block;
-    width: 30px;
-    height: 34px;
+    width: 40px; /* Зменшено з 60px */
+    height: 24px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -220,16 +220,16 @@ body.light-theme .theme-label {
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 24px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 16px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 18px; /* Зменшено з 26px */
+    width: 18px; /* Зменшено з 26px */
+    left: 3px; /* Зменшено з 4px */
+    bottom: 3px; /* Зменшено з 4px */
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
@@ -240,17 +240,17 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(16px);
+    transform: translateX(16px); /* Зменшено з 26px відповідно до ширини */
 }
 
 .theme-label {
-    font-size: 14px;
+    font-size: 12px; /* Зменшено з 14px */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-/* Решта стилів без змін */
+/* Решта стилів зі старого styles.css */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -269,54 +269,10 @@ input:checked + .slider:before {
     position: relative;
 }
 
-.instruction-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    color: #4682B4;
-    border: 1px solid #000080;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    letter-spacing: 2px;
-}
-.instruction-btn:hover {
-    background: #1E90FF;
-    color: #ffffff;
-}
-.znahidka-btn {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: transparent;
-    color: #4682B4;
-    border: 1px solid #000080;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 100;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    letter-spacing: 2px;
-}
-.znahidka-btn:hover {
-    background: #1E90FF;
-    color: #ffffff;
-}
 .instruction-img-link {
     margin-top: 20px;
 }
+
 .instruction-img {
     width: 80px;
     height: 80px;
@@ -491,8 +447,12 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-wrapper {
-        top: 110px; /* Трохи менше для адаптивності */
+        top: 110px;
         right: 10px;
+        gap: 6px;
+    }
+    .theme-label {
+        font-size: 11px;
     }
     .header-text {
         font-size: 18px;
