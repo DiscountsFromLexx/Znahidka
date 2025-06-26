@@ -202,8 +202,8 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 64px; /* Зменшено з 60px */
-    height: 34px; /* Зменшено з 34px */
+    width: 44px; /* Зменшено з 60px */
+    height: 24px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -530,7 +530,7 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 6px; /* Зменшено з 14px */
+        font-size: 14px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         color: #FF0000;
