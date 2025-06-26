@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
-        themeLabel.textContent = document.body.classList.contains('light-theme') ? 'світлий режим' : 'темний режим';
+        themeLabel.textContent = document.body.classList.contains('light-theme') ? // 'світлий режим' : 'темний режим';
         localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
         addLog('Theme Changed', { theme: localStorage.getItem('theme') });
     });
