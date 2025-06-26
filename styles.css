@@ -202,8 +202,8 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 44px; /* Зменшено з 60px */
-    height: 44px; /* Зменшено з 34px */
+    width: 34px; /* Зменшено з 60px */
+    height: 34px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -228,7 +228,7 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "OFF";
-    font-size: 8px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #000000;
@@ -525,12 +525,12 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 80px;
+        top: 70px;
         left: 10px;
         gap: 6px;
     }
     .theme-label {
-        font-size: 18px; /* Зменшено з 14px */
+        font-size: 14px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 200;
         color: #FF0000;
