@@ -201,7 +201,7 @@ body.light-theme .theme-label {
 
 .theme-toggle {
     display: inline-block;
-    width: 10px; /* Зменшено з 60px */
+    width: 5px; /* Зменшено з 60px */
     height: 24px; /* Зменшено з 34px */
 }
 
@@ -227,7 +227,7 @@ body.light-theme .theme-label {
     position: absolute;
     content: "";
     height: 18px; /* Зменшено з 26px */
-    width: 8px; /* Зменшено з 26px */
+    width: 14px; /* Зменшено з 26px */
     left: 3px; /* Зменшено з 4px */
     bottom: 3px; /* Зменшено з 4px */
     background-color: white;
@@ -240,7 +240,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(6px); /* Зменшено з 26px відповідно до ширини */
+    transform: translateX(16px); /* Зменшено з 26px відповідно до ширини */
 }
 
 .theme-label {
