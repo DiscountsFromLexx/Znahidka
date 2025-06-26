@@ -188,10 +188,10 @@ body.light-theme .theme-label {
     color: #000000;
 }
 
-/* Стилі для перемикача тем (зменшений розмір, окремий контейнер) */
+/* Стилі для перемикача тем (зменшений розмір, окремий контейнер, з написом) */
 .theme-toggle-container {
     position: absolute;
-    top: 90px; /* Нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
+    top: 90px; /* Нижче логотипу (80px висота + 10px відступ) */
     right: 15px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
@@ -200,6 +200,7 @@ body.light-theme .theme-label {
 }
 
 .theme-toggle {
+    position: relative;
     display: inline-block;
     width: 24px; /* Зменшено з 60px */
     height: 24px; /* Зменшено з 34px */
@@ -223,13 +224,32 @@ body.light-theme .theme-label {
     border-radius: 24px;
 }
 
+/* Напис на повзунку */
+.slider:after {
+    position: absolute;
+    content: "OFF";
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+
+input:checked + .slider:after {
+    content: "ON";
+    color: #FFFFFF;
+}
+
 .slider:before {
     position: absolute;
     content: "";
     height: 18px; /* Зменшено з 26px */
     width: 18px; /* Зменшено з 26px */
-    left: 3px; /* Зменшено з 4px */
-    bottom: 3px; /* Зменшено з 4px */
+    left: 3px; /* Початкове положення */
+    bottom: 3px;
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
@@ -240,11 +260,11 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(16px); /* Зменшено з 26px відповідно до ширини */
+    transform: translateX(3px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
-    font-size: 8px; /* Зменшено з 14px */
+    font-size: 12px; /* Збільшено з 4px для читабельності */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
