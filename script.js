@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollTopBtn = document.querySelector('.scroll-top-btn');
     const anonymousCheckbox = document.getElementById('anonymous');
     const customNameGroup = document.getElementById('customNameGroup');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLabel = document.querySelector('.theme-label');
 
     // Масив для збору логів
     const logs = [];
@@ -14,6 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
         logs.push(log);
         console.log(log); // Залишаємо console.log для локального дебагу
     };
+
+    // Перемикання тем
+    themeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+        themeLabel.textContent = document.body.classList.contains('light-theme') ? 'Світлий режим' : 'Темний режим';
+        localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        addLog('Theme Changed', { theme: localStorage.getItem('theme') });
+    });
+
+    // Завантаження збереженої теми
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+        themeToggle.checked = true;
+        themeLabel.textContent = 'Світлий режим';
+    } else {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        themeToggle.checked = false;
+        themeLabel.textContent = 'Темний режим';
+    }
 
     // Логування ініціалізації
     addLog('Telegram Web App', window.Telegram?.WebApp);
@@ -45,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Функція для прокрутки наверх
     window.scrollToTop = () => {
-        window.scrollTo({ top: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         addLog('Scroll to top', { action: 'scroll to top' });
     };
 
@@ -95,10 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         addLog('Data to Send', data);
-        addLog('Fetch URL', 'https://6f3b-34-45-121-93.ngrok-free.app/submit'); // Оновлений URL
+        addLog('Fetch URL', 'https://6f3b-34-45-121-93.ngrok-free.app/submit');
     
         try {
-            const response = await fetch('https://6f3b-34-45-121-93.ngrok-free.app/submit', { // Оновлений URL
+            const response = await fetch('https://6f3b-34-45-121-93.ngrok-free.app/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
