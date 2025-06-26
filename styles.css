@@ -277,7 +277,7 @@ input:checked + .slider:before {
     align-items: center;
     width: 90%;
     min-width: 300px;
-    max-height: 650px;
+    max-height: 600px;
     padding: 20px;
 }
 
