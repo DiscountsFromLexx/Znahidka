@@ -136,7 +136,7 @@ body.light-theme .znahidka-btn:hover {
 
 body.light-theme .header-text {
     color: #000000;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 body.light-theme .input-group label {
@@ -165,6 +165,7 @@ body.light-theme .submit-btn:hover, body.light-theme .clear-btn:hover {
 
 body.light-theme .channels-text {
     color: #000000;
+    font-weight: 300;
 }
 
 body.light-theme .tgkch-text {
