@@ -393,7 +393,7 @@ input:checked + .slider:before {
     padding: 12px;
     border-radius: 6px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
     color: #FFFF00;
@@ -406,7 +406,7 @@ input:checked + .slider:before {
     padding: 12px;
     border-radius: 6px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
     letter-spacing: 5px;
@@ -465,7 +465,7 @@ input:checked + .slider:before {
 .instructions-text {
     margin-top: 10px;
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
     letter-spacing: 1px;
@@ -514,14 +514,14 @@ input:checked + .slider:before {
         right: 10px;
         padding: 8px 15px;
         font-size: 14px;
-        font-weight: 200;
+        font-weight: 400;
     }
     .znahidka-btn {
         top: 10px;
         left: 10px;
         padding: 8px 15px;
         font-size: 14px;
-        font-weight: 200;
+        font-weight: 400;
         text-decoration: none;
     }
     .theme-toggle-container {
