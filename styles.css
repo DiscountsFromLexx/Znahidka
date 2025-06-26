@@ -239,7 +239,7 @@ body.light-theme .theme-label {
 }
 
 input:checked + .slider:after {
-    content: "OFF";
+    content: "ніч";
     color: #FFFFFF;
 }
 
@@ -260,7 +260,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(28px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(38px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
