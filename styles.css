@@ -227,7 +227,7 @@ body.light-theme .theme-label {
 /* Напис на повзунку */
 .slider:after {
     position: absolute;
-    content: "світлий режим";
+    content: "день";
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
