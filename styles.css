@@ -227,7 +227,7 @@ body.light-theme .theme-label {
     position: absolute;
     content: "";
     height: 18px; /* Зменшено з 26px */
-    width: 4px; /* Зменшено з 26px */
+    width: 18px; /* Зменшено з 26px */
     left: 3px; /* Зменшено з 4px */
     bottom: 3px; /* Зменшено з 4px */
     background-color: white;
@@ -244,9 +244,9 @@ input:checked + .slider:before {
 }
 
 .theme-label {
-    font-size: 12px; /* Зменшено з 14px */
+    font-size: 4px; /* Зменшено з 14px */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: 1px;
 }
 
@@ -505,7 +505,7 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 40px;
+        top: 20px;
         right: 10px;
         gap: 6px;
     }
