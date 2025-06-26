@@ -227,7 +227,7 @@ body.light-theme .theme-label {
     position: absolute;
     content: "";
     height: 18px; /* Зменшено з 26px */
-    width: 18px; /* Зменшено з 26px */
+    width: 8px; /* Зменшено з 26px */
     left: 3px; /* Зменшено з 4px */
     bottom: 3px; /* Зменшено з 4px */
     background-color: white;
@@ -240,7 +240,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(16px); /* Зменшено з 26px відповідно до ширини */
+    transform: translateX(6px); /* Зменшено з 26px відповідно до ширини */
 }
 
 .theme-label {
@@ -269,10 +269,54 @@ input:checked + .slider:before {
     position: relative;
 }
 
+.instruction-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #1E90FF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 2px;
+}
+.instruction-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+.znahidka-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #1E90FF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 2px;
+}
+.znahidka-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
 .instruction-img-link {
     margin-top: 20px;
 }
-
 .instruction-img {
     width: 80px;
     height: 80px;
