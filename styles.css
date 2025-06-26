@@ -239,7 +239,7 @@ body.light-theme .theme-label {
 }
 
 input:checked + .slider:after {
-    content: "ніч";
+    content: "НІЧ";
     color: #FFFFFF;
 }
 
