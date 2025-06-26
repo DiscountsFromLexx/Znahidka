@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
-        themeLabel.textContent = document.body.classList.contains('light-theme') ? 'світлий режим' : 'темний режим';
+        themeLabel.textContent = document.body.classList.contains('light-theme') ? '🔆' : '🌙';
         localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
         addLog('Theme Changed', { theme: localStorage.getItem('theme') });
     });
@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('dark-theme');
         document.body.classList.add('light-theme');
         themeToggle.checked = true;
-        themeLabel.textContent = 'Світлий режим';
+        themeLabel.textContent = '🔆';
     } else {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
         themeToggle.checked = false;
-        themeLabel.textContent = 'Темний режим';
+        themeLabel.textContent = '🌙';
     }
 
     // Логування ініціалізації
