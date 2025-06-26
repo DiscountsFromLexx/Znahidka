@@ -11,79 +11,87 @@
     <!-- Додаємо Telegram Web Apps SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
-<body>
+<body class="dark-theme">
     <div class="main-container">
-    <div class="container">
-        <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank" class="znahidka-btn">ЗНАХІДКИ</a>
-        <button type="button" class="instruction-btn">ІНСТРУКЦІЇ</button>
-        <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank" class="instruction-img-link">
-            <img src="https://raw.githubusercontent.com/DiscountsFromAli/X-CUBOT/main/images/znahidki.PNG" alt="Знахідки" class="instruction-img">
-        </a>
-        <div class="header-text">Ставайте співавтором каналу, діліться своїми знахідками!</div>
-        <div class="block-form">
-            <form id="telegramForm">
-                <div class="input-group">
-                    <label for="field1">Ціна:</label>
-                    <input type="text" id="field1" name="field1" placeholder="Тільки цифри (обов’язково)" required>
-                </div>
-                <div class="input-group">
-                    <label for="field4">Посилання:</label>
-                    <input type="text" id="field4" name="field4" placeholder="Посилання на товар (обов’язково)" required>
-                </div>
-                <div class="input-group">
-                    <label for="field5">Характеристики:</label>
-                    <input type="text" id="field5" name="field5" placeholder="Кількість, колір тощо, (не обов’язково)">
-                </div>                     
-                <div class="input-group">
-                    <label for="field3">Додаткові умови:</label>
-                    <input type="text" id="field3" name="field3" placeholder="Монети, рання, доставка тощо (не обов’язково)">
-                </div>                    
-                <div class="input-group">
-                    <label>
-                        <input type="checkbox" id="anonymous" name="anonymous"> Приховати ім’я (анонімно)
-                    </label>
-                </div>
-                <div class="input-group" id="customNameGroup" style="display: none;">
-                    <label for="customName">Власне ім’я:</label>
-                    <input type="text" id="customName" name="customName" placeholder="Введіть ім’я або залиштесь анонімним">
-                </div>
-                <div class="submit-group">
-                    <button type="submit" class="submit-btn">☀ ПОДІЛИТИСЬ ☀</button>
-                    <button type="button" class="clear-btn">🧹 ОЧИСТИТИ 🧹</button>
-                </div>
-            </form>
+        <div class="container">
+            <!-- Додаємо перемикач тем із підписом -->
+            <div class="theme-toggle-wrapper">
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-label">Темний режим</span>
+            </div>
+            <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank" class="znahidka-btn">ЗНАХІДКИ</a>
+            <button type="button" class="instruction-btn">ІНСТРУКЦІЇ</button>
+            <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank" class="instruction-img-link">
+                <img src="https://raw.githubusercontent.com/DiscountsFromAli/X-CUBOT/main/images/znahidki.PNG" alt="Знахідки" class="instruction-img">
+            </a>
+            <div class="header-text">Ставайте співавтором каналу, діліться своїми знахідками!</div>
+            <div class="block-form">
+                <form id="telegramForm">
+                    <div class="input-group">
+                        <label for="field1">Ціна:</label>
+                        <input type="text" id="field1" name="field1" placeholder="Тільки цифри (обов’язково)" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="field4">Посилання:</label>
+                        <input type="text" id="field4" name="field4" placeholder="Посилання на товар (обов’язково)" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="field5">Характеристики:</label>
+                        <input type="text" id="field5" name="field5" placeholder="Кількість, колір тощо, (не обов’язково)">
+                    </div>                     
+                    <div class="input-group">
+                        <label for="field3">Додаткові умови:</label>
+                        <input type="text" id="field3" name="field3" placeholder="Монети, рання, доставка тощо (не обов’язково)">
+                    </div>                    
+                    <div class="input-group">
+                        <label>
+                            <input type="checkbox" id="anonymous" name="anonymous"> Приховати ім’я (анонімно)
+                        </label>
+                    </div>
+                    <div class="input-group" id="customNameGroup" style="display: none;">
+                        <label for="customName">Власне ім’я:</label>
+                        <input type="text" id="customName" name="customName" placeholder="Введіть ім’я або залиштесь анонімним">
+                    </div>
+                    <div class="submit-group">
+                        <button type="submit" class="submit-btn">☀ ПОДІЛИТИСЬ ☀</button>
+                        <button type="button" class="clear-btn">🧹 ОЧИСТИТИ 🧹</button>
+                    </div>
+                </form>
+            </div>
+            <div class="channels-text">
+                <div class="tgkch-text">🔆 НАШІ ТЕЛЕГРАМ КАНАЛИ</div>
+                <p>
+                    🌶 <strong>𝐀ʟì↻ᴀᴛട 🐾</strong> - товари за ціною більше 100 грн.<br>
+                    <a href="https://t.me/+7dNuLBNGj244MWU6" target="_blank">https://t.me/+7dNuLBNGj244MWU6</a>
+                </p>
+                <p>
+                    💸 <strong>Аліекспрес - ШАРА НА ШАРУ!</strong> - товари дешевше 100 грн.<br>
+                    <a href="https://t.me/+96EuuIO84_I3NDU6" target="_blank">https://t.me/+96EuuIO84_I3NDU6</a>
+                </p>
+                <p>
+                    🔥 <strong>Сховище промокодів з AliExpress</strong> - купуйте дешевше з промокодами.<br>
+                    <a href="https://t.me/+TSjki0TSVRI4YzYy" target="_blank">https://t.me/+TSjki0TSVRI4YzYy</a>
+                </p>
+                <p>シ Ми працюємо для вас та завдяки вам!♥️</p>
+            </div>
+            <div class="iheader-text" id="instructions">Інструкції</div>
+            <div class="instructions-text">
+                <p>✅ У полі "Ціна" вказуйте тільки ціну, округлену без десятих.</p>
+                <p>✅ У полі "Посилання" вставляйте посилання з мобільного додатку ("https://a.aliexpress.com/...; https://s.click.aliexpress.com/...") або сайту ("https://www.aliexpress.com/...").</p>
+                <p>✅ Поле "Характеристики" необов’язкове, вказуйте назву або інші характеристики (кількість, колір тощо)</p>
+                <p>✅ Поле "Додаткові умови" необов’язкове, вказуйте розділ (монети, рання тощо), купони чи інші умови.</p><br>             
+                <p>♥️ Діліться товаром, щоб зробити когось таким же щасливчиком, як ви!</p>
+                <p>
+                    <strong>Ваш товар буде опубліковано на каналі ЗНАХІДКИ</strong>
+                    <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank">https://t.me/+Nmsg2YySEj8zYTVi</a>
+                </p>
+                <p><br>シ Гарного настрою!</p>
+            </div>
         </div>
-        <div class="channels-text">
-            <div class="tgkch-text">🔆 НАШІ ТЕЛЕГРАМ КАНАЛИ</div>
-            <p>
-                🌶 <strong>𝐀ʟì↻ᴀᴛട 🐾</strong> - товари за ціною більше 100 грн.<br>
-                <a href="https://t.me/+7dNuLBNGj244MWU6" target="_blank">https://t.me/+7dNuLBNGj244MWU6</a>
-            </p>
-            <p>
-                💸 <strong>Аліекспрес - ШАРА НА ШАРУ!</strong> - товари дешевше 100 грн.<br>
-                <a href="https://t.me/+96EuuIO84_I3NDU6" target="_blank">https://t.me/+96EuuIO84_I3NDU6</a>
-            </p>
-            <p>
-                🔥 <strong>Сховище промокодів з AliExpress</strong> - купуйте дешевше з промокодами.<br>
-                <a href="https://t.me/+TSjki0TSVRI4YzYy" target="_blank">https://t.me/+TSjki0TSVRI4YzYy</a>
-            </p>
-            <p>シ Ми працюємо для вас та завдяки вам!♥️</p>
-        </div>
-        <div class="iheader-text" id="instructions">Інструкції</div>
-        <div class="instructions-text">
-            <p>✅ У полі "Ціна" вказуйте тільки ціну, округлену без десятих.</p>
-            <p>✅ У полі "Посилання" вставляйте посилання з мобільного додатку ("https://a.aliexpress.com/...; https://s.click.aliexpress.com/...") або сайту ("https://www.aliexpress.com/...").</p>
-            <p>✅ Поле "Характеристики" необов’язкове, вказуйте назву або інші характеристики (кількість, колір тощо)</p>
-            <p>✅ Поле "Додаткові умови" необов’язкове, вказуйте розділ (монети,рання тощо), купони чи інші умови.</p><br>             
-            <p>♥️ Діліться товаром, щоб зробити когось таким же щасливчиком, як ви!</p>
-            <p>
-                <strong>Ваш товар буде опубліковано на каналі ЗНАХІДКИ</strong>
-                <a href="https://t.me/+Nmsg2YySEj8zYTVi" target="_blank">https://t.me/+Nmsg2YySEj8zYTVi</a>
-            </p>
-            <p><br>シ Гарного настрою!</p>
-        </div>
-    </div>
-    <button class="scroll-top-btn" onclick="scrollToTop()">Вгору</button>
+        <button class="scroll-top-btn" onclick="scrollToTop()">Вгору</button>
     </div>
     <!-- Підключаємо script.js після SDK -->
     <script src="script.js"></script>
