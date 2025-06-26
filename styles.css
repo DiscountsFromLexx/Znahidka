@@ -126,6 +126,7 @@ body.light-theme .znahidka-btn {
     background: transparent;
     color: #4682B4;
     border: 1px solid #000080;
+    font-weight: 300;
 }
 
 body.light-theme .znahidka-btn:hover {
@@ -135,6 +136,7 @@ body.light-theme .znahidka-btn:hover {
 
 body.light-theme .header-text {
     color: #000000;
+    font-weight: 300;
 }
 
 body.light-theme .input-group label {
