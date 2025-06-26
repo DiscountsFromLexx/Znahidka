@@ -191,7 +191,7 @@ body.light-theme .theme-label {
 /* Стилі для перемикача тем */
 .theme-toggle-wrapper {
     position: absolute;
-    top: 40px;
+    top: 15px;
     left: 15px;
     display: flex;
     align-items: center;
