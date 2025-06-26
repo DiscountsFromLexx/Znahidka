@@ -191,8 +191,8 @@ body.light-theme .theme-label {
 /* Стилі для перемикача тем */
 .theme-toggle-wrapper {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 115px; /* Зміщено нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
+    right: 15px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -447,8 +447,8 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-wrapper {
-        top: 10px;
-        left: 10px;
+        top: 110px; /* Трохи менше для адаптивності */
+        right: 10px;
     }
     .header-text {
         font-size: 18px;
