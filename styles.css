@@ -505,7 +505,7 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 40px;
+        top: 90px;
         right: 10px;
         gap: 6px;
     }
@@ -513,6 +513,7 @@ input:checked + .slider:before {
         font-size: 4px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 200;
+        color: #FF0000;
         
     }
     .header-text {
