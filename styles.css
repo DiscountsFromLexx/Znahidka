@@ -505,7 +505,7 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 20px;
+        top: 40px;
         right: 10px;
         gap: 6px;
     }
