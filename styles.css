@@ -188,8 +188,8 @@ body.light-theme .theme-label {
     color: #000000;
 }
 
-/* Стилі для перемикача тем (зменшений розмір) */
-.theme-toggle-wrapper {
+/* Стилі для перемикача тем (зменшений розмір, окремий контейнер) */
+.theme-toggle-container {
     position: absolute;
     top: 115px; /* Нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
     right: 15px; /* Праворуч, як instruction-btn */
@@ -446,7 +446,7 @@ input:checked + .slider:before {
         font-weight: 200;
         text-decoration: none;
     }
-    .theme-toggle-wrapper {
+    .theme-toggle-container {
         top: 110px;
         right: 10px;
         gap: 6px;
