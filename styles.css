@@ -114,10 +114,11 @@ body.light-theme .instruction-btn {
     background: transparent;
     color: #4682B4;
     border: 1px solid #000080;
+    font-weight: 300;
 }
 
 body.light-theme .instruction-btn:hover {
-    background: #1E90FF;
+    background: #191970;
     color: #ffffff;
 }
 
