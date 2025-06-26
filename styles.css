@@ -202,7 +202,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 44px; /* Зменшено з 60px */
+    width: 54px; /* Зменшено з 60px */
     height: 24px; /* Зменшено з 34px */
 }
 
@@ -228,9 +228,9 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "день";
-    font-size: 10px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: #000000;
     top: 50%;
     left: 50%;
@@ -260,7 +260,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(48px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(38px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
@@ -530,7 +530,7 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 14px; /* Зменшено з 14px */
+        font-size: 16px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         color: #FF0000;
