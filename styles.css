@@ -246,8 +246,8 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 18px; /* Зменшено з 26px */
-    width: 18px; /* Зменшено з 26px */
+    height: 8px; /* Зменшено з 26px */
+    width: 8px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
     bottom: 3px;
     background-color: white;
@@ -260,11 +260,11 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(38px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(48px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
-    font-size: 12px; /* Збільшено з 4px для читабельності */
+    font-size: 8px; /* Збільшено з 4px для читабельності */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
@@ -530,7 +530,7 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 10px; /* Зменшено з 14px */
+        font-size: 6px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         color: #FF0000;
