@@ -3,15 +3,254 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #000000, #191970);
     min-height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
+
+/* Темний режим (поточний стиль) */
+body.dark-theme {
+    background: linear-gradient(to bottom, #000000, #191970);
+}
+
+body.dark-theme .container {
+    background: linear-gradient(to bottom, #000000, #191970);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .instruction-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #1E90FF;
+}
+
+body.dark-theme .instruction-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.dark-theme .znahidka-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #1E90FF;
+}
+
+body.dark-theme .znahidka-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.dark-theme .header-text {
+    color: #FFFFFF;
+}
+
+body.dark-theme .input-group label {
+    color: #FFFFFF;
+}
+
+body.dark-theme .input-group input {
+    border: 1px solid #4682B4;
+    color: #FFFFFF;
+    background: #000000;
+}
+
+body.dark-theme .input-group input:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+body.dark-theme .submit-btn, body.dark-theme .clear-btn {
+    background: linear-gradient(to bottom, #4682B4, #4682B4);
+    border: 1px solid #1E90FF;
+}
+
+body.dark-theme .submit-btn:hover, body.dark-theme .clear-btn:hover {
+    background: linear-gradient(to bottom, #4682B4, #1E90FF);
+}
+
+body.dark-theme .channels-text {
+    color: #FFFFFF;
+}
+
+body.dark-theme .tgkch-text {
+    color: #FFFFFF;
+}
+
+body.dark-theme .iheader-text {
+    color: #FFFFFF;
+}
+
+body.dark-theme .instructions-text {
+    color: #FFFFFF;
+}
+
+body.dark-theme .instructions-text a {
+    color: #00BFFF;
+}
+
+body.dark-theme .instructions-text a:hover {
+    color: #B2EBF2;
+}
+
+body.dark-theme .theme-label {
+    color: #FFFFFF;
+}
+
+/* Світлий режим (на основі наданого коду) */
+body.light-theme {
+    background: transparent;
+}
+
+body.light-theme .container {
+    background: #B0E0E6;
+}
+
+body.light-theme .instruction-btn {
+    background: transparent;
+    color: #4682B4;
+    border: 1px solid #000080;
+}
+
+body.light-theme .instruction-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.light-theme .znahidka-btn {
+    background: transparent;
+    color: #4682B4;
+    border: 1px solid #000080;
+}
+
+body.light-theme .znahidka-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.light-theme .header-text {
+    color: #000000;
+}
+
+body.light-theme .input-group label {
+    color: #000000;
+}
+
+body.light-theme .input-group input {
+    border: 0px solid #000080;
+    color: #000000;
+    background: #F5F5F5;
+}
+
+body.light-theme .input-group input:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+body.light-theme .submit-btn, body.light-theme .clear-btn {
+    background: #4682B4;
+    border: 1px solid #FFFFFF;
+}
+
+body.light-theme .submit-btn:hover, body.light-theme .clear-btn:hover {
+    background: linear-gradient(to bottom, #4682B4, #1E90FF);
+}
+
+body.light-theme .channels-text {
+    color: #FFFFFF;
+}
+
+body.light-theme .tgkch-text {
+    color: #FFFFFF;
+}
+
+body.light-theme .iheader-text {
+    color: #FFFFFF;
+}
+
+body.light-theme .instructions-text {
+    color: #FFFFFF;
+}
+
+body.light-theme .instructions-text a {
+    color: #00BFFF;
+}
+
+body.light-theme .instructions-text a:hover {
+    color: #B2EBF2;
+}
+
+body.light-theme .theme-label {
+    color: #000000;
+}
+
+/* Стилі для перемикача тем */
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1E90FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-label {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Решта стилів без змін */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -21,123 +260,73 @@ body {
     max-width: 600px;
     padding: 20px;
 }
+
 .container {
     width: 100%;
-    background: linear-gradient(to bottom, #000000, #191970);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
 }
-.instruction-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    color: #FFFFFF;
-    border: 2px solid #1E90FF;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    letter-spacing: 2px;
-}
-.instruction-btn:hover {
-    background: #1E90FF;
-    color: #ffffff;
-}
-.znahidka-btn {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: transparent;
-    color: #FFFFFF;
-    border: 2px solid #1E90FF;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 100;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    letter-spacing: 2px;
-}
-.znahidka-btn:hover {
-    background: #1E90FF;
-    color: #ffffff;
-}
+
 .instruction-img-link {
     margin-top: 20px;
 }
+
 .instruction-img {
     width: 80px;
     height: 80px;
     border-radius: 10px;
 }
+
 .header-text {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 100;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
     letter-spacing: 2px;
     text-align: center;
 }
+
 .block-form {
     margin-top: 20px;
     padding: 10px;
 }
+
 .input-group {
     margin-bottom: 16px;
     text-align: left;
 }
+
 .input-group label {
     display: block;
     font-size: 20px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
+
 .input-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #4682B4;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
     letter-spacing: 2px;
-    background: #000000;
     transition: border-color 0.3s ease;
 }
-.input-group input:focus {
-    outline: none;
-    border-color: #1E90FF;
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
-}
+
 .submit-group {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
 }
+
 .submit-btn, .clear-btn {
-    background: linear-gradient(to bottom, #4682B4, #4682B4);
-    color: #fff;
     padding: 12px;
-    border: 1px solid #1E90FF;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 400;
@@ -148,69 +337,69 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .submit-btn:hover, .clear-btn:hover {
-    background: linear-gradient(to bottom, #4682B4, #1E90FF);
     transform: translateY(-2px);
 }
+
 .submit-btn:active, .clear-btn:active {
     transform: translateY(0);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
+
 .channels-text {
     margin-top: 30px;
     font-size: 16px;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    color: #FFFFFF;
     letter-spacing: 1px;
     text-align: left;
 }
+
 .tgkch-text {
     font-size: 18px;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    color: #FFFFFF;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
+
 .channels-text a {
     color: #1E90FF;
     text-decoration: none;
 }
+
 .channels-text a:hover {
     text-decoration: underline;
 }
+
 .iheader-text {
     margin-top: 40px;
     font-size: 22px;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    color: #FFFFFF;
     text-align: left;
 }
+
 .instructions-text {
     margin-top: 10px;
     font-size: 16px;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    color: #FFFFFF;
     letter-spacing: 1px;
     text-align: left;
     line-height: 1.5;
 }
+
 .instructions-text a {
-    color: #00BFFF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-.instructions-text a:hover {
-    color: #B2EBF2;
-    text-decoration: underline;
-}
+
 .scroll-top-btn {
     display: none;
     position: fixed;
@@ -227,10 +416,12 @@ body {
     transition: all 0.3s ease;
     z-index: 1000;
 }
+
 .scroll-top-btn:hover {
     background: #FF6347;
     transform: scale(1.1);
 }
+
 @media (max-width: 500px) {  
     .main-container {
         padding: 4px;
@@ -239,7 +430,6 @@ body {
     .container {
         padding: 6px;
         width: 100%;
-        
     }
     .instruction-btn {
         top: 10px;
@@ -256,6 +446,10 @@ body {
         font-weight: 200;
         text-decoration: none;
     }
+    .theme-toggle-wrapper {
+        top: 10px;
+        left: 10px;
+    }
     .header-text {
         font-size: 18px;
         font-weight: 200;
@@ -264,6 +458,5 @@ body {
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        color: #FFFFFF;
     }
 }
