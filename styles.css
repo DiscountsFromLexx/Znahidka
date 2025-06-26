@@ -202,7 +202,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 54px; /* Зменшено з 60px */
+    width: 64px; /* Зменшено з 60px */
     height: 34px; /* Зменшено з 34px */
 }
 
@@ -228,7 +228,7 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "OFF";
-    font-size: 14px;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #000000;
@@ -239,7 +239,7 @@ body.light-theme .theme-label {
 }
 
 input:checked + .slider:after {
-    content: "ON";
+    content: "OFF";
     color: #FFFFFF;
 }
 
@@ -260,7 +260,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(3px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(10px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
@@ -530,7 +530,7 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 14px; /* Зменшено з 14px */
+        font-size: 10px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         color: #FF0000;
