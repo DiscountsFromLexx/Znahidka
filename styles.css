@@ -244,9 +244,9 @@ input:checked + .slider:before {
 }
 
 .theme-label {
-    font-size: 4px; /* Зменшено з 14px */
+    font-size: 8px; /* Зменшено з 14px */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -510,7 +510,10 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 11px;
+        font-size: 4px; /* Зменшено з 14px */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        
     }
     .header-text {
         font-size: 18px;
