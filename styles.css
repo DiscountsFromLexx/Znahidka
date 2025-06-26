@@ -191,7 +191,7 @@ body.light-theme .theme-label {
 /* Стилі для перемикача тем (зменшений розмір, окремий контейнер) */
 .theme-toggle-container {
     position: absolute;
-    top: 115px; /* Нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
+    top: 90px; /* Нижче логотипу (80px висота + 20px margin-top + 15px відступ) */
     right: 15px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
@@ -201,7 +201,7 @@ body.light-theme .theme-label {
 
 .theme-toggle {
     display: inline-block;
-    width: 40px; /* Зменшено з 60px */
+    width: 10px; /* Зменшено з 60px */
     height: 24px; /* Зменшено з 34px */
 }
 
