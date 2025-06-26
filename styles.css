@@ -103,7 +103,7 @@ body {
 .input-group label {
     display: block;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
     letter-spacing: 2px;
@@ -263,7 +263,7 @@ body {
     .input-group input {
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 200;
+        font-weight: 300;
         color: #FFFFFF;
     }
 }
