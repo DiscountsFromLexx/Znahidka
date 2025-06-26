@@ -134,7 +134,7 @@ body {
     margin-top: 20px;
 }
 .submit-btn, .clear-btn {
-    background: linear-gradient(to bottom, #000000, #000000);
+    background: linear-gradient(to bottom, #4682B4, #4682B4);
     color: #fff;
     padding: 12px;
     border: 1px solid #1E90FF;
