@@ -270,7 +270,7 @@ input:checked + .slider:before {
 }
 
 .theme-label {
-    font-size: 8px; /* Збільшено з 4px для читабельності */
+    font-size: 14px; /* Збільшено з 4px для читабельності */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
