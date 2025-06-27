@@ -206,7 +206,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    height: 60px; /* Зменшено з 34px */
+    height: 50px; /* Зменшено з 34px */
     width: 84px;  /*  64px */
     
     
@@ -234,11 +234,11 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "світлий режим";
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000000;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.4s;
@@ -536,7 +536,7 @@ input:checked + .slider:before {
         gap: 6px;
     }
     .theme-label {
-        font-size: 18px; /* Зменшено з 14px */
+        font-size: 14px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         color: #FF0000;
