@@ -196,17 +196,17 @@ body.light-theme .theme-label {
 .theme-toggle-container {
     position: absolute;
     top: 65px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 36px; /* Праворуч, як instruction-btn */
+    right: 14px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
-    gap: 8px; /* 8зч
+    gap: 18px; /* 8зч
     z-index: 1000;
 }
 
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 180px; /*  64px */
+    width: 64px;  /*  64px */
     height: 34px; /* Зменшено з 34px */
 }
 
