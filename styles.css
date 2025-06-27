@@ -196,7 +196,7 @@ body.light-theme .theme-label {
 .theme-toggle-container {
     position: absolute;
     top: 65px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 56px; /* Праворуч, як instruction-btn 36 */
+    right: 66px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
     gap: 8px; /* 8зч */
@@ -206,7 +206,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    height: 70px; /* Зменшено з 34px */
+    height: 60px; /* Зменшено з 34px */
     width: 84px;  /*  64px */
     
     
