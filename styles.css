@@ -199,7 +199,7 @@ body.light-theme .theme-label {
     right: 38px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
-    gap: 7px; /* 8зч
+    gap: 8px; /* 8зч
     z-index: 1000;
 }
 
@@ -251,7 +251,7 @@ input:checked + .slider:after {
     position: absolute;
     content: "";
     height: 12px; /* Зменшено з 26px */
-    width: 22px; /* Зменшено з 26px */
+    width: 12px; /* Зменшено з 26px */
     left: 8px; /* Початкове положення */
     bottom: 3px;
     background-color: white;
