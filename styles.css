@@ -199,7 +199,7 @@ body.light-theme .theme-label {
     right: 56px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
-    gap: 8px; /* 8зч */
+    gap: 6px; /* 8зч */
     z-index: 1000;
 }
 
@@ -531,9 +531,9 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 50px;
+        top: 55px;
         right: 15px;
-        gap: 6px;
+        gap: 4px;
     }
     .theme-label {
         font-size: 12px; /* Зменшено з 14px */
