@@ -196,7 +196,7 @@ body.light-theme .theme-label {
 .theme-toggle-container {
     position: absolute;
     top: 65px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 30px; /* Праворуч, як instruction-btn */
+    right: 35px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -206,7 +206,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 105px; /*  64px */
+    width: 110px; /*  64px */
     height: 34px; /* Зменшено з 34px */
 }
 
@@ -232,7 +232,7 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "DAY ON";
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #000000;
@@ -264,7 +264,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(77px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(80px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
@@ -530,7 +530,7 @@ input:checked + .slider:before {
     }
     .theme-toggle-container {
         top: 70px;
-        right: 10px;
+        right: 8px;
         gap: 6px;
     }
     .theme-label {
