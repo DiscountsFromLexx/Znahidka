@@ -196,7 +196,7 @@ body.light-theme .theme-label {
 .theme-toggle-container {
     position: absolute;
     top: 90px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 15px; /* Праворуч, як instruction-btn */
+    right: 20px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -206,8 +206,8 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 84px; /*  64px */
-    height: 44px; /* Зменшено з 34px */
+    width: 94px; /*  64px */
+    height: 54px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -264,7 +264,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(48px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(58px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
