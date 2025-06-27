@@ -206,7 +206,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 94px; /*  64px */
+    width: 98px; /*  64px */
     height: 34px; /* Зменшено з 34px */
 }
 
@@ -232,7 +232,7 @@ body.light-theme .theme-label {
 .slider:after {
     position: absolute;
     content: "DAY ON";
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #000000;
@@ -243,7 +243,7 @@ body.light-theme .theme-label {
 }
 
 input:checked + .slider:after {
-    content: "НІЧ";
+    content: "NIGHT ON";
     color: #FFFFFF;
 }
 
