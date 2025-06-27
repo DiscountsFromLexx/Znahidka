@@ -199,14 +199,14 @@ body.light-theme .theme-label {
     right: 36px; /* Праворуч, як instruction-btn */
     display: flex;
     align-items: center;
-    gap: 6px; /* 8зч
+    gap: 8px; /* 8зч
     z-index: 1000;
 }
 
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 110px; /*  64px */
+    width: 180px; /*  64px */
     height: 34px; /* Зменшено з 34px */
 }
 
