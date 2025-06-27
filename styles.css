@@ -252,7 +252,7 @@ input:checked + .slider:after {
     content: "";
     height: 12px; /* Зменшено з 26px */
     width: 12px; /* Зменшено з 26px */
-    left: 4px; /* Початкове положення */
+    left: 5px; /* Початкове положення */
     bottom: 3px;
     background-color: white;
     transition: 0.4s;
