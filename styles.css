@@ -206,8 +206,8 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 54px; /* Зменшено з 60px */
-    height: 34px; /* Зменшено з 34px */
+    width: 64px; /* Зменшено з 60px */
+    height: 44px; /* Зменшено з 34px */
 }
 
 .theme-toggle input {
@@ -264,7 +264,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(38px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
+    transform: translateX(48px); /* Переміщення до протилежного кінця (24px - 18px - 3px) */
 }
 
 .theme-label {
