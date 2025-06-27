@@ -195,11 +195,11 @@ body.light-theme .theme-label {
 /* Стилі для перемикача тем (зменшений розмір, окремий контейнер, з написом) */
 .theme-toggle-container {
     position: absolute;
-    top: 55px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 56px; /* Праворуч, як instruction-btn 36 */
+    top: 60px; /* Нижче логотипу (80px висота + 10px відступ) */
+    right: 60px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
-    gap: 6px; /* 8зч */
+    gap: 4px; /* 8зч */
     z-index: 1000;
 }
 
@@ -532,8 +532,8 @@ input:checked + .slider:before {
     }
     .theme-toggle-container {
         top: 60px;
-        right: 20px;
-        gap: 4px;
+        right: 30px;
+        gap: 2px;
     }
     .theme-label {
         font-size: 12px; /* Зменшено з 14px */
