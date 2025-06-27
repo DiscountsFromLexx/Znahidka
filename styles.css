@@ -531,12 +531,12 @@ input:checked + .slider:before {
         text-decoration: none;
     }
     .theme-toggle-container {
-        top: 70px;
-        right: 10px;
+        top: 50px;
+        right: 15px;
         gap: 6px;
     }
     .theme-label {
-        font-size: 14px; /* Зменшено з 14px */
+        font-size: 12px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         color: #FF0000;
