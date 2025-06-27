@@ -195,8 +195,8 @@ body.light-theme .theme-label {
 /* Стилі для перемикача тем (зменшений розмір, окремий контейнер, з написом) */
 .theme-toggle-container {
     position: absolute;
-    top: 65px; /* Нижче логотипу (80px висота + 10px відступ) */
-    right: 66px; /* Праворуч, як instruction-btn 36 */
+    top: 55px; /* Нижче логотипу (80px висота + 10px відступ) */
+    right: 56px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
     gap: 8px; /* 8зч */
