@@ -199,7 +199,7 @@ body.light-theme .theme-label {
     right: 36px; /* Праворуч, як instruction-btn 36 */
     display: flex;
     align-items: center;
-    gap: 8px; /* 8зч
+    gap: 6px; /* 8зч
     z-index: 1000;
 }
 
@@ -208,7 +208,7 @@ body.light-theme .theme-label {
     display: inline-block;
     
     height: 34px; /* Зменшено з 34px */
-    width: 294px;  /*  64px */
+    width: 64px;  /*  64px */
 }
 
 .theme-toggle input {
