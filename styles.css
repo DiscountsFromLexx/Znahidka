@@ -206,8 +206,9 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    width: 194px;  /*  64px */
-    height: 134px; /* Зменшено з 34px */
+    
+    height: 34px; /* Зменшено з 34px */
+    width: 294px;  /*  64px */
 }
 
 .theme-toggle input {
