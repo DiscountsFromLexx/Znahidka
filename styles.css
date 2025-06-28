@@ -573,7 +573,7 @@ input:checked + .slider:before {
     .theme-toggle-container {
         top: 60px;
         right: 10px;
-        gap: 2px;
+        gap: 1px;
     }
     .theme-label {
         font-size: 10px; /* Зменшено з 14px */
@@ -587,7 +587,7 @@ input:checked + .slider:before {
     .theme-label:not(.active) {
         font-size: 8px;
     }
-    }
+    
     .header-text {
         font-size: 18px;
         font-weight: 200;
