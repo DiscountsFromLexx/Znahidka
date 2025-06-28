@@ -267,8 +267,7 @@ body.light-theme .theme-label {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #D3D3D3; /* кольор напису */
-    border: 1px solid #1E90FF;
+    color: #D3D3D3; /* кольор напису */    
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -288,7 +287,8 @@ input:checked + .slider:after {
     width: 14px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
     bottom: 4px; /* 3 */
-    background-color: #B0C4DE; /* Кольор овального пепемикача */
+    background-color: transparent; /* Кольор овального пепемикача */
+    border: 1px solid #1E90FF;
     transition: 0.4s;
     border-radius: 50%;
 }
