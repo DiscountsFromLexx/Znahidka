@@ -238,8 +238,7 @@ body.light-theme .theme-label {
     position: relative;
     display: inline-block;
     height: 30px; /* Зменшено з 34px */
-    width: 94px;  /*  64px */
-    border: 1px solid #FFFFFF;
+    width: 94px;  /*  64px */   
     
 }
 
@@ -258,6 +257,7 @@ body.light-theme .theme-label {
     bottom: 0;
     background-color: #000000; /* задній фон темного режиму */
     transition: 0.4s;
+    border: 1px solid #FFFFFF;
     border-radius: 24px;
 }
 
