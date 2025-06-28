@@ -268,19 +268,23 @@ body.light-theme .theme-label {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #D3D3D3; /* колір напису */
-    top: 50%; /* Змінено з 45% для вертикального центрування */
+    color: #D3D3D3;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%; /* Забезпечує заповнення повзунка */
+    text-align: center; /* Чітке горизонтальне центрування */
     transition: 0.4s;
 }
 
 input:checked + .slider:after {
     content: "світлий режим";
     color: #FFFFFF;
-    top: 50%; /* Додано для консистентності */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
 
 /* Овальний перемикач */
