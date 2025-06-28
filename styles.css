@@ -237,7 +237,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    height: 40px; /* Зменшено з 34px */
+    height: 30px; /* Зменшено з 34px */
     width: 94px;  /*  64px */   
     
 }
@@ -282,7 +282,7 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 30px; /* Зменшено з 26px */
+    height: 20px; /* Зменшено з 26px */
     width: 14px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
     bottom: 4px; /* 3 */
