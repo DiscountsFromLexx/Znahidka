@@ -17,27 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(log); // Залишаємо console.log для локального дебагу
     };
 
-    // Перемикання тем
+    // Перемикання тем    
     themeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
-        themeLabel.textContent = document.body.classList.contains('light-theme') ? '🔆' : '🌙';
-        localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        const isLightTheme = document.body.classList.contains('light-theme');
+        document.querySelector('.theme-label-moon').classList.toggle('active', !isLightTheme);
+        document.querySelector('.theme-label-sun').classList.toggle('active', isLightTheme);
+        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
         addLog('Theme Changed', { theme: localStorage.getItem('theme') });
     });
-
+    
     // Завантаження збереженої теми
     const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         document.body.classList.remove('dark-theme');
         document.body.classList.add('light-theme');
         themeToggle.checked = true;
-        themeLabel.textContent = '🔆';
+        document.querySelector('.theme-label-moon').classList.remove('active');
+        document.querySelector('.theme-label-sun').classList.add('active');
     } else {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
         themeToggle.checked = false;
-        themeLabel.textContent = '🌙';
+        document.querySelector('.theme-label-moon').classList.add('active');
+        document.querySelector('.theme-label-sun').classList.remove('active');
     }
 
     // Логування ініціалізації
