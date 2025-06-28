@@ -268,8 +268,8 @@ body.light-theme .theme-label {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #D3D3D3; /* кольор напису */    
-    top: 45%;
+    color: #D3D3D3; /* колір напису */
+    top: 50%; /* Змінено з 45% для вертикального центрування */
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.4s;
@@ -278,6 +278,9 @@ body.light-theme .theme-label {
 input:checked + .slider:after {
     content: "світлий режим";
     color: #FFFFFF;
+    top: 50%; /* Додано для консистентності */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Овальний перемикач */
@@ -571,7 +574,7 @@ input:checked + .slider:before {
     .theme-label {
         font-size: 10px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
+        font-weight: 100;
         color: #FF0000;
 
     .theme-label.active {
