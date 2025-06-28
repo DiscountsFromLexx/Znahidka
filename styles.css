@@ -255,7 +255,7 @@ body.light-theme .theme-label {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #B0E0E6; /* задній фон перемикача */
+    background-color: #696969; /* задній фон */
     transition: 0.4s;
     border-radius: 24px;
 }
@@ -267,7 +267,7 @@ body.light-theme .theme-label {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #D3D3D3;
+    color: #D3D3D3; /* кольор напису */
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
