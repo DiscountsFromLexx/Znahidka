@@ -562,7 +562,7 @@ input:checked + .slider:before {
     }
     .theme-toggle-container {
         top: 60px;
-        right: 30px;
+        right: 10px;
         gap: 2px;
     }
     .theme-label {
@@ -575,7 +575,7 @@ input:checked + .slider:before {
         font-size: 16px;
     }
     .theme-label:not(.active) {
-        font-size: 10px;
+        font-size: 8px;
     }
     }
     .header-text {
