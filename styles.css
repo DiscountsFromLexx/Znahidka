@@ -238,7 +238,8 @@ body.light-theme .theme-label {
     position: relative;
     display: inline-block;
     height: 30px; /* Зменшено з 34px */
-    width: 94px;  /*  64px */   
+    width: 94px;  /*  64px */
+    border: 1px solid #FFFFFF;
     
 }
 
@@ -288,7 +289,7 @@ input:checked + .slider:after {
     left: 1px; /* Початкове положення */
     bottom: 4px; /* 3 */
     background-color: transparent; /* Кольор овального пепемикача */
-    border: 1px solid #1E90FF;
+    border: 1px solid #FFFFFF;
     transition: 0.4s;
     border-radius: 50%;
 }
