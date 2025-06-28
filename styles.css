@@ -203,6 +203,37 @@ body.light-theme .theme-label {
     z-index: 1000;
 }
 
+.theme-label {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: font-size 0.3s ease;
+}
+
+body.dark-theme .theme-label {
+    color: #FFFFFF;
+}
+
+body.light-theme .theme-label {
+    color: #000000;
+}
+
+.theme-label-moon {
+    order: -1; /* Розташовуємо 🌙 ліворуч від перемикача */
+}
+
+.theme-label-sun {
+    order: 1; /* Розташовуємо 🔆 праворуч від перемикача */
+}
+
+.theme-label.active {
+    font-size: 18px; /* Більший розмір для активного режиму */
+}
+
+.theme-label:not(.active) {
+    font-size: 12px; /* Менший розмір для неактивного режиму */
+}
+
 .theme-toggle {
     position: relative;
     display: inline-block;
@@ -535,11 +566,17 @@ input:checked + .slider:before {
         gap: 2px;
     }
     .theme-label {
-        font-size: 14px; /* Зменшено з 14px */
+        font-size: 12px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         color: #FF0000;
-        
+
+    .theme-label.active {
+        font-size: 16px;
+    }
+    .theme-label:not(.active) {
+        font-size: 10px;
+    }
     }
     .header-text {
         font-size: 18px;
