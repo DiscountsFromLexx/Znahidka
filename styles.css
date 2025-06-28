@@ -287,7 +287,7 @@ input:checked + .slider:after {
     height: 14px; /* 20px */
     width: 14px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
-    bottom: 6px; /* відстань перемикача знизу  */
+    bottom: 7px; /* відстань перемикача знизу  */
     background-color: transparent; /* Кольор овального перемикача */
     border: 1px solid #FFFFFF;
     transition: 0.4s;
