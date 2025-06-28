@@ -207,8 +207,7 @@ body.light-theme .theme-label {
     position: relative;
     display: inline-block;
     height: 40px; /* Зменшено з 34px */
-    width: 84px;  /*  64px */
-    
+    width: 84px;  /*  64px */   
     
 }
 
@@ -238,7 +237,7 @@ body.light-theme .theme-label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000000;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.4s;
@@ -252,7 +251,7 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 12px; /* Зменшено з 26px */
+    height: 40px; /* Зменшено з 26px */
     width: 12px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
     bottom: 4px; /* 3 */
