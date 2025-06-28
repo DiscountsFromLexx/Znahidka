@@ -237,7 +237,7 @@ body.light-theme .theme-label {
 .theme-toggle {
     position: relative;
     display: inline-block;
-    height: 35px; /* Зменшено з 34px */
+    height: 40px; /* Зменшено з 34px */
     width: 94px;  /*  64px */   
     
 }
