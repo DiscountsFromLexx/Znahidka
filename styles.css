@@ -251,7 +251,7 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 40px; /* Зменшено з 26px */
+    height: 30px; /* Зменшено з 26px */
     width: 12px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
     bottom: 4px; /* 3 */
