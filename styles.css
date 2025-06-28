@@ -263,8 +263,8 @@ body.light-theme .theme-label {
 /* Напис на повзунку */
 .slider:after {
     position: absolute;
-    content: "світлий режим";
-    font-size: 14px;
+    content: "темний режим";
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000000;
@@ -275,7 +275,7 @@ body.light-theme .theme-label {
 }
 
 input:checked + .slider:after {
-    content: "темний режим";
+    content: "світлий режим";
     color: #FFFFFF;
 }
 
@@ -566,7 +566,7 @@ input:checked + .slider:before {
         gap: 2px;
     }
     .theme-label {
-        font-size: 12px; /* Зменшено з 14px */
+        font-size: 10px; /* Зменшено з 14px */
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         color: #FF0000;
