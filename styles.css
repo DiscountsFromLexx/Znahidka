@@ -287,8 +287,8 @@ input:checked + .slider:after {
     height: 20px; /* Зменшено з 26px */
     width: 14px; /* Зменшено з 26px */
     left: 1px; /* Початкове положення */
-    bottom: 3px; /* 3 */
-    background-color: transparent; /* Кольор овального пепемикача */
+    bottom: 4px; /* 3 */
+    background-color: transparent; /* Кольор овального перемикача */
     border: 1px solid #FFFFFF;
     transition: 0.4s;
     border-radius: 50%;
