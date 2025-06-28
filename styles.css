@@ -299,7 +299,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(75px); /* Відстань прокрутки перемикача */
+    transform: translateX(73px); /* Відстань прокрутки перемикача */
 }
 
 .theme-label {
