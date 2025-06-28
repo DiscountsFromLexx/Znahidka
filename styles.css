@@ -267,7 +267,7 @@ body.light-theme .theme-label {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #800000;
+    color: #F5F5F5;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -276,7 +276,7 @@ body.light-theme .theme-label {
 
 input:checked + .slider:after {
     content: "світлий режим";
-    color: #FFA500;
+    color: #FFFFFF;
 }
 
 /* Овальний перемикач */
