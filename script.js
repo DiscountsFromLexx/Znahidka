@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const submitBtn = document.querySelector('.submit-btn');
         submitBtn.disabled = true; // Блокуємо кнопку
-        submitBtn.textContent = 'Відправка...'; // Змінюємо текст для індикації
+        submitBtn.textContent = 'відправка...'; // Змінюємо текст для індикації
     
         const fields = ['field1', 'field4', 'field5', 'field3'].map(id => document.getElementById(id).value);
         const anonymous = anonymousCheckbox.checked;
