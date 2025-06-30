@@ -306,11 +306,11 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(120px); /* Відстань прокрутки перемикача 73 */
+    transform: translateX(116px); /* Відстань прокрутки перемикача 73 */
 }
 
 .theme-label {
-    font-size: 16px; /* Збільшено з 4px для читабельності */
+    font-size: 16px; /* Збільшив з 4px для читабельності */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
