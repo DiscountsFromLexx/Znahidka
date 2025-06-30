@@ -291,9 +291,9 @@ input:checked + .slider:after {
 .slider:before {
     position: absolute;
     content: "";
-    height: 14px; /* 20px */
-    width: 14px; /* Зменшено з 26px */
-    left: 2px; /* Початкове положення */
+    height: 28px; /* 14px */
+    width: 28px; /* 14px */
+    left: -5px; /* Початкове положення 2 */
     bottom: 11px; /* відстань перемикача знизу  */
     background-color: transparent; /* Кольор овального перемикача */
     border: 1px solid #FFFFFF;
@@ -306,7 +306,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(73px); /* Відстань прокрутки перемикача */
+    transform: translateX(78px); /* Відстань прокрутки перемикача 73 */
 }
 
 .theme-label {
