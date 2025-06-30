@@ -293,7 +293,7 @@ input:checked + .slider:after {
     content: "";
     height: 30px; /* 14px */
     width: 30px; /* 14px */
-    left: -35px; /* Початкове положення 2 */
+    left: -33px; /* Початкове положення 2 */
     bottom: 2px; /* відстань перемикача знизу 11 */
     background-color: transparent; /* Кольор овального перемикача */
     border: 1px solid #FFFFFF;
