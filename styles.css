@@ -306,7 +306,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(116px); /* Відстань прокрутки перемикача 73 */
+    transform: translateX(118px); /* Відстань прокрутки перемикача 73 */
 }
 
 .theme-label {
