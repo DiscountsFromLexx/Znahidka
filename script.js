@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Обробка відправки форми
-        form.addEventListener('submit', async (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
         const submitBtn = document.querySelector('.submit-btn');
         submitBtn.disabled = true;
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             userName = customName || 'Incognito'; // Якщо введено customName, використовуємо його, інакше "Incognito"
             addLog('Anonymous Mode: userName set to', userName);
         } else {
-            userName = user ? (user.username ? `@${user.username}` : user.first_name || 'Incognito') : 'Incognito';
+            userName = user ? (user.first_name || (user.username ? `@${user.username}` : 'Incognito')) : 'Incognito';
             addLog('Non-Anonymous Mode: userName set to', userName);
             addLog('Username', user?.username);
             addLog('First Name', user?.first_name);
