@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         addLog('Data to Send', data);
-        addLog('Fetch URL', 'https://d74e0fadbba0.ngrok-free.app/submit');
+        addLog('Fetch URL', 'https://2fde-34-134-106-120.ngrok-free.app/submit');
     
         try {
-            const response = await fetch('https://d74e0fadbba0.ngrok-free.app/submit', {
+            const response = await fetch('https://2fde-34-134-106-120.ngrok-free.app/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
